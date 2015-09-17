@@ -27,7 +27,8 @@ module.exports = function(options) {
     };
 
     var wiredepOptions = {
-      directory: 'bower_components'
+      directory: 'bower_components',
+      exclude: [/bootstrap-sass-official/, /bootstrap\.css/]
     };
 
     return gulp.src(options.src + '/*.html')

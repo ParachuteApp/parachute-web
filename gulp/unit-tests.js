@@ -13,6 +13,7 @@ module.exports = function(options) {
   function listFiles(callback) {
     var bowerDeps = wiredep({
       directory: 'bower_components',
+      exclude: [/bootstrap-sass-official/, /bootstrap\.css/],
       dependencies: true,
       devDependencies: true
     });

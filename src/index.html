@@ -2,12 +2,13 @@
 <html ng-app="parachuteWeb">
   <head>
     <meta charset="utf-8">
-    <title>Parachute</title>
+    <title>parachuteWeb</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <link rel="stylesheet" href="app/vendor.css">
     <!-- bower:css -->
     <!-- run `gulp inject` to automatically populate bower styles dependencies -->
     <!-- endbower -->
@@ -24,8 +25,6 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    
-    <header ng-include="'components/navbar/navbar.html'"></header>
     <div ng-view></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -54,5 +53,27 @@
     <!-- endinject -->
     <!-- endbuild -->
 
+
   </body>
+   <!--   Core JS Files   -->
+  <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+  
+  <!--  Checkbox, Radio & Switch Plugins -->
+  <script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+  
+  <!--  Charts Plugin -->
+  <script src="assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+    
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+  <script src="assets/js/light-bootstrap-dashboard.js"></script>
+  
+  <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+  <script src="assets/js/demo.js"></script>
 </html>

@@ -1,14 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 @import 'styles/bourbon/bourbon';
+@import 'styles/pe-icon-7-stroke';
+@import 'styles/light-bootstrap-dashboard';
+@import 'styles/demo';
 @import 'styles/main';
-
-html {
-  font-family: 'Roboto Slab', serif;
-}
-
-[layout=row] {
-  flex-direction: row;
-}
 
 .browsehappy {
   margin: 0.2em 0;
@@ -22,36 +16,6 @@ html {
 
   img.pull-right {
     width: 50px;
-  }
-}
-
-md-toolbar.md-default-theme {
-  background-color: black;
-}
-
-section.jumbotron {
-  padding: 1px 30px;
-  background-color: #5aadbb;
-  text-align: center;
-
-  color: white;
-
-  h1 {
-    font-size: 3em;
-  }
-}
-
-.techs {
-  display: flex;
-  flex-flow: row wrap;
-
-  md-card {
-    width: 30%;
-
-    img.pull-right {
-      float: right;
-      width: 50px;
-    }
   }
 }
 // injector

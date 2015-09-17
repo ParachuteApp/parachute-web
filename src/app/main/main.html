@@ -1,72 +1,214 @@
-<div layout="vertical" layout-fill>
-
-  <md-content class="main-container">
-
-    <section class="jumbotron button-container">
-
-      <md-button class="md-fab md-mini" aria-label="Open parachute"> 
-        Open parachute
-      </md-button>
-
-    </section>
-
-    <section class="contact-list">
-      
-      <md-list>
-        <md-subheader class="md-no-stycky">
-          Contact list
-        </md-subheader>
-
-        <md-list-item ng-repeat="contact in contacts">
-          <div class="md-list-item-text">
-            <h3>{{ contact.companyName }}</h3>
-            <p>{{ contact.firstName}} {{contact.lastName}}</p>
-            <a href="mailto:{{contact.email}}">{{ contact.email }}</a>
-            <p>{{ contact.note }}</p>
-          </div>
-          <md-divider></md-divider>
-        </md-list-item>
-
-      </md-list>
-
-    </section>
-
-    <section class="contact-add">
-      <form name="userForm">
-      <div layout layout-sm="column">
-        <md-input-container style="width:70%">
-            <label>Company name (required)</label>
-            <input ng-model="newContact.companyName" >
-          </md-input-container>
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">    
+    
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+    
+    
+      <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    Parachute
+                </a>
+            </div>
+                       
+            <ul class="nav">
+                <li class="active">
+                    <a href="dashboard.html">
+                        <p>Dashboard</p>
+                    </a>            
+                </li>
+                <li>
+                    <a href="user.html">
+                        <p>User Profile</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="table.html">
+                        <p>Table List</p>
+                    </a>        
+                </li>
+                <li>
+                    <a href="typography.html">
+                        <p>Typography</p>
+                    </a>        
+                </li>
+                <li>
+                    <a href="icons.html">
+                        <p>Icons</p>
+                    </a>        
+                </li>
+                <li>
+                    <a href="maps.html">
+                        <p>Maps</p>
+                    </a>        
+                </li>
+                 <li>
+                    <a href="notifications.html"> 
+                        <p>Notifications</p>
+                    </a>        
+                </li>
+            </ul> 
       </div>
-      <div layout layout-sm="column">
-        <md-input-container flex>
-          <label>Contact name (optional)</label>
-          <input ng-model="newContact.firstName" />
-        </md-input-container>
-        <md-input-container flex>
-          <label>Contact surname (optional)</label>
-          <input ng-model="newContact.lastName" />
-        </md-input-container>
-      </div>
-      <div layout layout-sm="column">
-        <md-input-container style="width:70%">
-            <label>Email address (required)</label>
-            <input ng-model="newContact.email" />
-          </md-input-container>
-      </div>
-      <md-input-container flex>
-        <label>Note (optional)</label>
-        <textarea ng-model="neContact.note" columns="1" md-maxlength="150"></textarea>
-      </md-input-container>
-      <md-button class="md-raised md-primary" ng-click="addNewContact()">Add</md-button>
-    </form>
-    </section>
-
-    <div class="techs" layout-align="center">
     </div>
-    <footer>
-    </footer>
-  </md-content>
+    
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">    
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">       
+                    
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="">
+                               Account
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Dropdown
+                                    <b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Log out
+                            </a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+                     
+                     
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Contact list</h4>
+                            </div>
+                            <div class="content">
+                               <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Company name</th>
+                                            <th>Contact name</th>
+                                            <th>Email address</th>
+                                            <th>Company website</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>CoffeeStrap</td>
+                                            <td>Mahesh Casiraghi</td>
+                                            <td>jobs@coffeestrap.com</td>
+                                            <td><a href="#">www.coffeestrap.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wonderflow</td>
+                                            <td>Giovanni Gaglione</td>
+                                            <td>jobs@wondeflow.co</td>
+                                            <td><a href="#">www.wonderflow.co</a></td>
+                                        </tr>
+                                    </tbody>
+                              </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Add new contact</h4>
+                            </div>
+                            <div class="content">
+                                <form>
 
+                                  <div class="form-group">
+                                    <label for="inputCompanyName">Company name</label>
+                                    <input type="text" id="inputCompanyName" class="form-control" placeholder="Company name">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputContactName">Contact name</label>
+                                    <input type="text" id="inputContactName" class="form-control" placeholder="Contact name">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputEmailAddress">Email address</label>
+                                    <input type="email" id="inputEmailAddress" class="form-control" placeholder="Email">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputCompanyWebsite">Company website</label>
+                                    <input type="text" id="inputCompanyWebsite" class="form-control" placeholder="Company website">
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="content text-center">
+                            <button class="btn btn-parachute">  
+                                Open parachute
+                            </button>
+                        </div>
+
+                    </div>
+               
+                </div>                    
+            </div>
+        </div>
+        
+        
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                               Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; 2015 <a href="http://www.creative-tim.com">Parachute</a>, made with love for a better web
+                </p>
+            </div>
+        </footer>
+        
+    </div>   
 </div>
+
+
+</body>
