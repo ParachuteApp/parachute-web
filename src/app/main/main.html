@@ -116,17 +116,11 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>CoffeeStrap</td>
-                                            <td>Mahesh Casiraghi</td>
-                                            <td>jobs@coffeestrap.com</td>
-                                            <td><a href="#">www.coffeestrap.com</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Wonderflow</td>
-                                            <td>Giovanni Gaglione</td>
-                                            <td>jobs@wondeflow.co</td>
-                                            <td><a href="#">www.wonderflow.co</a></td>
+                                        <tr ng-repeat="contact in contacts">
+                                            <td>{{ contact.companyName }}</td>
+                                            <td>{{ contact.name }}</td>
+                                            <td>{{ contact.email }}</td>
+                                            <td>{{ contact.website }}</td>
                                         </tr>
                                     </tbody>
                               </table>
@@ -139,25 +133,25 @@
                                 <h4 class="title">Add new contact</h4>
                             </div>
                             <div class="content">
-                                <form>
+                                <form name="newContactForm">
 
                                   <div class="form-group">
                                     <label for="inputCompanyName">Company name</label>
-                                    <input type="text" id="inputCompanyName" class="form-control" placeholder="Company name">
+                                    <input ng-model="newContact.companyName" type="text" id="inputCompanyName" class="form-control" placeholder="Company name">
                                   </div>
                                   <div class="form-group">
                                     <label for="inputContactName">Contact name</label>
-                                    <input type="text" id="inputContactName" class="form-control" placeholder="Contact name">
+                                    <input ng-model="newContact.name" type="text" id="inputContactName" class="form-control" placeholder="Contact name">
                                   </div>
                                   <div class="form-group">
                                     <label for="inputEmailAddress">Email address</label>
-                                    <input type="email" id="inputEmailAddress" class="form-control" placeholder="Email">
+                                    <input ng-model="newContact.email" type="email" id="inputEmailAddress" class="form-control" placeholder="Email">
                                   </div>
                                   <div class="form-group">
                                     <label for="inputCompanyWebsite">Company website</label>
-                                    <input type="text" id="inputCompanyWebsite" class="form-control" placeholder="Company website">
+                                    <input ng-model="newContact.website" type="text" id="inputCompanyWebsite" class="form-control" placeholder="Company website">
                                   </div>
-                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                  <button type="submit" class="btn btn-primary" ng-click="addContact(newContact)">Submit</button>
                                 </form>
                             </div>
                         </div>
