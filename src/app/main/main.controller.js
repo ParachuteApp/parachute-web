@@ -1,58 +1,43 @@
 'use strict';
 
 angular.module('parachuteWeb')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      {
-        'title': 'AngularJS',
-        'url': 'https://angularjs.org/',
-        'description': 'HTML enhanced for web apps!',
-        'logo': 'angular.png'
-      },
-      {
-        'title': 'BrowserSync',
-        'url': 'http://browsersync.io/',
-        'description': 'Time-saving synchronised browser testing.',
-        'logo': 'browsersync.png'
-      },
-      {
-        'title': 'GulpJS',
-        'url': 'http://gulpjs.com/',
-        'description': 'The streaming build system.',
-        'logo': 'gulp.png'
-      },
-      {
-        'title': 'Jasmine',
-        'url': 'http://jasmine.github.io/',
-        'description': 'Behavior-Driven JavaScript.',
-        'logo': 'jasmine.png'
-      },
-      {
-        'title': 'Karma',
-        'url': 'http://karma-runner.github.io/',
-        'description': 'Spectacular Test Runner for JavaScript.',
-        'logo': 'karma.png'
-      },
-      {
-        'title': 'Protractor',
-        'url': 'https://github.com/angular/protractor',
-        'description': 'End to end test framework for AngularJS applications built on top of WebDriverJS.',
-        'logo': 'protractor.png'
-      },
-      {
-        'title': 'Angular Material Design',
-        'url': 'https://material.angularjs.org/#/',
-        'description': 'The Angular reference implementation of the Google\'s Material Design specification.',
-        'logo': 'angular-material.png'
-      },
-      {
-        'title': 'Sass (Node)',
-        'url': 'https://github.com/sass/node-sass',
-        'description': 'Node.js binding to libsass, the C version of the popular stylesheet preprocessor, Sass.',
-        'logo': 'node-sass.png'
-      }
+
+.controller('MainCtrl', function ($scope) {
+
+    $scope.contacts = [
+        
+        {
+            companyName: 'CoffeeStrap',
+            email: 'info@coffeestrap.com',
+            firstName: 'Luca',
+            lastName: 'De Franceschi',
+            note: 'Contacted on 4th of July'
+        },
+        {
+            companyName: 'CoffeeStrap',
+            email: 'info@coffeestrap.com',
+            firstName: 'Luca',
+            lastName: 'De Franceschi',
+            note: 'Contacted on 4th of July'
+        },
+        {
+            companyName: 'CoffeeStrap',
+            email: 'info@coffeestrap.com',
+            firstName: 'Luca',
+            lastName: 'De Franceschi',
+            note: 'Contacted on 4th of July'
+        }
+
     ];
-    angular.forEach($scope.awesomeThings, function(awesomeThing) {
-      awesomeThing.rank = Math.random();
-    });
-  });
+
+    $scope.addNewContact = function() {
+
+        if ($scope.newContact.email && $scope.newContact.companyName) {
+
+            $scope.contacts.unshift($scope.newContact);
+
+        }
+
+    };
+
+});

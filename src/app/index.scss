@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+@import 'styles/bourbon/bourbon';
+@import 'styles/main';
 
 html {
   font-family: 'Roboto Slab', serif;
@@ -28,7 +30,6 @@ md-toolbar.md-default-theme {
 }
 
 section.jumbotron {
-  margin-bottom: 30px;
   padding: 1px 30px;
   background-color: #5aadbb;
   text-align: center;
